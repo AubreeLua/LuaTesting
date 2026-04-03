@@ -35,7 +35,7 @@ function WeatherData.generateAll()
 	-- if cape1km > cape_3km
 	WeatherData.Measurements.CAPE_total = math.random(500, 4500)
 	local cape1km = math.random(
-		math.floor(WeatherData.Measurements.CAPE_total * 0.1),   -- ìin 10%
+		math.floor(WeatherData.Measurements.CAPE_total * 0.1),   -- Ã¬in 10%
 		math.floor(WeatherData.Measurements.CAPE_total * 0.4)    -- max 40%
 	)
 	WeatherData.Measurements.CAPE_1km = cape1km
@@ -45,8 +45,10 @@ function WeatherData.generateAll()
 	)
 
 	-- SRH
-	WeatherData.Measurements.SRH_3km = math.random(0, 700)
-	WeatherData.Measurements.SRH_1km = math.random(0, 400)
+	WeatherData.Measurements.SRH_3km = math.random(400, 700)
+	local max1km = WeatherData.Measurements.SRH_3km
+	local min1km = math.floor(max1km * 0.3)
+	WeatherData.Measurements.SRH_1km = math.random(min1km,max1km)
 
 	-- PWAT
 	WeatherData.Measurements.PWAT = math.random(0, 200) / 100
