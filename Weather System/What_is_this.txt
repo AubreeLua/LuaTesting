@@ -1,0 +1,6 @@
+Weather System
+==============
+This folder was developed for the purpose of educating users in luau to study the weather
+Contains module and server scripts
+========================================================================================
+Module scripts must be in Replicated Storage and server scripts must be in ServerScriptService

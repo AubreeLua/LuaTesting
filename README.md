@@ -1,2 +1,2 @@
 # LuaTesting
-Experiment with lua programming language
+Experiments with lua|luau programming language
